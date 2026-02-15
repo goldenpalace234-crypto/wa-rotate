@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var numbers = [
+"16477234034",
+"15793328523",
+"18193052017",
+"18199240163",
+"15793963012"
+];
+
+var index = localStorage.getItem("waIndex") || 0;
+var number = numbers[index];
+localStorage.setItem("waIndex", (parseInt(index)+1) % numbers.length);
+
+window.location.href = "https://wa.me/" + number;
+</script>
+</head>
+<body>
+Redirecting...
+</body>
+</html>
